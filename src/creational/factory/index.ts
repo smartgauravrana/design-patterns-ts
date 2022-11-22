@@ -36,7 +36,7 @@ class ConcreteProduct2 implements Product {
 }
 
 // client code will work with the base class Creator, so that any subclass can be passed
-function clientCode(creator: Creator) {
+function factory_clientCode(creator: Creator) {
   // .... code
   console.log(
     "Client: I'm not aware of the creator's class , but it still works."
@@ -46,7 +46,7 @@ function clientCode(creator: Creator) {
 
 // application code
 console.log("App: Launched with the ConcreteCreator1");
-clientCode(new ConcreteCreator1());
+factory_clientCode(new ConcreteCreator1());
 
 console.log("App: Launched with the ConcreteCreator2");
-clientCode(new ConcreteCreator2());
+factory_clientCode(new ConcreteCreator2());
